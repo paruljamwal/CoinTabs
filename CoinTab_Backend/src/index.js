@@ -7,6 +7,14 @@ app.use(express.json()); //for post
 const PORT = process.env.PORT 
 const connect=require('./config/db');
 
+// user controller.....
+const userController=require("./Controller/user.controller");
+
+
+//MiddleWare.....
+app.use("/user",userController);
+
+
 
 
 
