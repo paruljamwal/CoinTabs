@@ -5,6 +5,7 @@ require("dotenv").config();
 const connect=require('./config/db');
 
 
+app.use(cors());
 app.use(express.json()); //for post
 
 const PORT = process.env.PORT 
@@ -22,8 +23,11 @@ app.use("/user",userController);
 
 app.listen(PORT, async () => {
     try {
-      await connect();
-      console.log(`Listening on port http://localhost:${PORT}`);
+    let a=  await connect();
+  //  a.db.insert({"name":"p"}) 
+  let db = a.Mongoose
+  console.log(db)
+    console.log(`Listening on port http://localhost:${PORT}`);
     } catch (error) {
       console.log(error);
     }
