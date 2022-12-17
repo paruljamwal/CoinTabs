@@ -15,10 +15,15 @@
 
   
   # Home page
+  
   <img src="https://user-images.githubusercontent.com/96183163/208266141-bc233e93-bc90-41c1-a470-be31e602566b.png" />
+  
   # Details page
+  
   <img src="https://user-images.githubusercontent.com/96183163/208266102-612e0aa9-d26c-4289-9660-309f31c2abe8.png" />
+  
   # 404 page
+  
   <img src="https://user-images.githubusercontent.com/96183163/208266126-38f841f0-73e4-49df-91f4-0eea2dcbb023.png" />
 
   
