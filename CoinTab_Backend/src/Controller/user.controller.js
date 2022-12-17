@@ -15,7 +15,7 @@ const URL = process.env.MONGODB_URL;
 router.get("/", async (req, res) => {
   try {
     const page = req.query.page || 1;
-    const limit = req.query.limit || 10;
+    const limit = req.query.limit || 55;
     let skip = (page - 1) * limit;
 
     const response = await fetch(
@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
       if (err) {
         throw err;
       }
-      dbs = db.db("CoinTabApp");
+      dbs = db.db("CoinTabAppp");
       dbs.collection("users").insertMany(data?.results[0]);
       // console.log(dbs)
     });
