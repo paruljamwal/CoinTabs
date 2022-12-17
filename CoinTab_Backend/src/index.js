@@ -24,6 +24,7 @@ app.use("/user",userController);
 
 app.listen(PORT, async () => {
     try {
+      await connect();
     console.log(`Listening on port http://localhost:${PORT}`);
     } catch (error) {
       console.log(error);
