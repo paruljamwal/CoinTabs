@@ -1,7 +1,7 @@
 
 
 
-import { GET_USER, USER_ERROR, USER_LOADING } from "./userActionType"
+import { DELETE_USER, GET_USER, USER_ERROR, USER_LOADING } from "./userActionType"
 
 
 export const getUser=(payload)=>{
@@ -11,6 +11,12 @@ export const getUser=(payload)=>{
     }
 }
 
+const deleteUser =(payload)=>{
+    return{
+        type: DELETE_USER,
+        payload
+    }
+}
 
 const loading=()=>{
     return{
@@ -18,9 +24,10 @@ const loading=()=>{
     }
 }
 
-const Error=()=>{
+const Error=(e)=>{
     return{
-        type:USER_ERROR
+        type:USER_ERROR,
+        e
     }
 }
 
@@ -28,12 +35,36 @@ const Error=()=>{
 
 export const fetchUser=(payload)=>(dispatch)=>{
   dispatch(loading())
-  return fetch(`https://cointabb.up.railway.app/user?page=1&limit=3`)
+  return fetch(`https://cointabb.up.railway.app/user`)
   .then(r=>(r.json()))
   .then(d=>dispatch(getUser(d)))
   .catch(e=>dispatch(Error()))
 }
 
+export const searchUser=(id)=>(dispatch)=>{
+    dispatch(loading())
+    return fetch(`https://cointabb.up.railway.app/user/${id}`)
+    .then(r=>(r.json()))
+    .then(d=>dispatch(getUser(d)))
+    .catch(e=>dispatch(Error()))
+  }
+  
 
 
+
+
+export const fetchUserData=(page,limit)=>(dispatch)=>{
+    dispatch(loading())
+    return fetch(`https://cointabb.up.railway.app/user?page=${page}&limit=${limit}`)
+    .then(r=>(r.json()))
+    .then(d=>dispatch(getUser(d)))
+    .catch(e=>dispatch(Error()))
+  }
+  
+export const allUserDelete=()=>(dispatch)=>{
+    dispatch(loading())
+    return fetch(`https://cointabb.up.railway.app/user/delete`)
+    .then(d=>dispatch(getUser(d)))
+    .catch(e=>dispatch(Error(e)))
+}
 

@@ -11,19 +11,19 @@ export const UserReducer=(store=initData,{type,payload})=>{
     switch (type) {
         case USER_LOADING:
             return {
-                store,
+                ...store,
                 loading:true,
                 error:false
             }
         case GET_USER:
             return{
-                store,
+                ...store,
                 loading:false,
                 UserData:payload
             }
         case USER_ERROR:
             return{
-                store,
+                ...store,
                 loading:false,
                 error:true
             }    

@@ -49,8 +49,28 @@ option{
 }
 
 
-.container{
+.containerr{
   margin: 10px;
 }
 
+.disable{
+  cursor: not-allowed;
+  color: rgb(8, 156, 156);
+  border: 1px solid teal;
+  margin: 3px;
+  padding: 5px 15px;
+  border-radius: 5px;
 
+}
+
+
+input{
+  border: 1px solid teal;
+  padding: 5px;
+  color: teal;
+  outline:none;
+}
+
+.ShowDiffColor{
+  background-color: cornflowerblue;
+}
