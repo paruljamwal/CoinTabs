@@ -1,0 +1,29 @@
+
+.main{
+    background-image: url("https://knowmax-ai-website.s3.amazonaws.com/wp-content/uploads/2021/07/21173656/Decision-trees-in-Healthcare-call-centers.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.btn{
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgb(3,152,158);
+    margin: 10px;
+    color: rgb(3,152,158);
+    font-weight: bold;
+
+}
+
+
+.btn:hover{
+    background-color:rgb(3,152,158);
+    transition: 1s;
+    opacity: 1;
+    color: black;
+
+}

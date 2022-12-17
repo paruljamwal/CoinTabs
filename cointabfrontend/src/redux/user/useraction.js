@@ -28,9 +28,9 @@ const Error=()=>{
 
 export const fetchUser=(payload)=>(dispatch)=>{
   dispatch(loading())
-  return fetch(`https://cointabb.up.railway.app/user`)
+  return fetch(`https://cointabb.up.railway.app/user?page=1&limit=3`)
   .then(r=>(r.json()))
-  .then(d=>dispatch(getUser(d.user)))
+  .then(d=>dispatch(getUser(d)))
   .catch(e=>dispatch(Error()))
 }
 

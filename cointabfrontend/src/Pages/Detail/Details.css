@@ -20,3 +20,37 @@
     background-color: black;
     color: white;
   }
+
+.btnn {
+  color: teal;
+  border: 1px solid teal;
+  margin: 3px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnn:hover{
+  background-color: teal;
+  color: black;
+}
+
+select{
+  color: teal;
+  border: 1px solid teal;
+  padding: 5px 15px;
+  border-radius: 5px;
+  
+}
+
+option{
+  color: teal;
+  cursor: pointer;
+}
+
+
+.container{
+  margin: 10px;
+}
+
+

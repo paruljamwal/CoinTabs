@@ -7,7 +7,7 @@ const initData={
 }
 
 export const UserReducer=(store=initData,{type,payload})=>{
-    console.log(payload);
+
     switch (type) {
         case USER_LOADING:
             return {

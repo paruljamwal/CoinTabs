@@ -24,7 +24,7 @@ const NavBar = () => {
             </li>
 
             <li>
-              <Link to="/user/:id">Details</Link>
+              <Link to="/user/details">Details</Link>
             </li>
 
             <li>
