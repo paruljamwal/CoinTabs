@@ -11,7 +11,7 @@ li {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: teal;
+  background-color:rgb(3,152,158);
   color: #fff;
 }
 
@@ -107,15 +107,5 @@ input[type="checkbox"] {
     display: block;
   }
 
-  .dropdown {
-    left: 50%;
-
-    top: 30px;
-
-    transform: translateX(35%);
-  }
-
-  .dropdown li:hover {
-  background-color: #4c9e9e;
-  }
+ 
 }

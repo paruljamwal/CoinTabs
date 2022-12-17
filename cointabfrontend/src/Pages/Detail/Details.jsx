@@ -1,6 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import "./Details.css";
 const Details = () => {
+
+  const user = useSelector(store=>store.User.UserData)
+  // console.log(user);
+  
   return (
     <div>
       <h1>User Details</h1>
@@ -14,14 +19,19 @@ const Details = () => {
     <th>Balance</th>
   </thead>
   <tbody>
-    <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-    <td>Germany</td>
-    <td>23232</td>
+    {
+      user?.map((e)=>(
+    <tr key={e.id} >
+    <td>{e.first}</td>
+    <td>{e.last}</td>
+    <td>{e.email}</td>
+    <td>{e.address}</td>
+    <td>{e.balance}</td>
 
     </tr>
+
+      ))
+    }
   </tbody>
  
 </table>

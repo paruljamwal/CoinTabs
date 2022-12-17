@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
 import Details from '../Pages/Detail/Details';
+import Error from '../Pages/Error/Error';
 import Home from '../Pages/Home/Home';
 const AllRoutes = () => {
   return (
@@ -8,6 +9,7 @@ const AllRoutes = () => {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/user/:id' element={<Details/>} />
+        <Route path='*' element={<Error/>} />
       </Routes>
     </div>
   )
