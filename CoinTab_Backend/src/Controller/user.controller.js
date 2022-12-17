@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
       if (err) {
         throw err;
       }
-      dbs = db.db("CoinTabAssignment");
+      dbs = db.db("CoinTabApp");
       dbs.collection("users").insertMany(data?.results[0]);
       // console.log(dbs)
     });
